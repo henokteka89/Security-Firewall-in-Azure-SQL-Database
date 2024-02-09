@@ -1,0 +1,16 @@
+
+Execute the following T-SQL query by pasting the text into your query window.
+a.	Important: Replace 000.000.000.00 with your client IP address. Click Execute or press F5.
+
+
+EXECUTE sp_set_database_firewall_rule 
+        @name = N'AWFirewallRule',
+        @start_ip_address = '000.000.000.00', 
+        @end_ip_address = '000.000.000.00'
+
+
+Create a contained user in the "AdventureWorks" database. Click New Query and execute the following T-SQL.
+sql
+USE [AdventureWorks]
+GO
+CREATE USER ContainedDemo WITH PASSWORD = 'P@ssw0rd01'
